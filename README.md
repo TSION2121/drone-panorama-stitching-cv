@@ -1,7 +1,18 @@
-feature_matcher.py: Load images → detect keypoints → match descriptors → visualize matches
+# Drone Panorama Stitching (CV Final Project)
 
-homography_estimator.py: Use matched keypoints → apply RANSAC → compute homography matrix
+This project stitches overlapping drone images into a seamless panorama using feature matching, RANSAC, and warping techniques.
 
-stitcher.py: Warp one image → blend with the other → export final panorama
+## Tools
+- Python 3.10
+- OpenCV
+- IntelliJ IDEA
 
-main.py: Orchestrates the full pipeline step by step
+## Structure
+- `data/`: input drone images
+- `modules/`: feature matching, homography, stitching
+- `output/`: final panoramas
+- `main.py`: pipeline entry point
+
+## How to Run
+```bash
+python main.py
