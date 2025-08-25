@@ -3,7 +3,7 @@
 This project stitches overlapping drone images into a seamless panorama using feature matching, RANSAC, and warping techniques.
 
 ## Tools
-- Python 3.10
+- Python 3.11
 - OpenCV
 - IntelliJ IDEA
 
