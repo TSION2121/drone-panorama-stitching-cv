@@ -23,6 +23,23 @@ The goal of Phase 1 is to find visual “landmarks” that appear in both dron
 4. **Sort & Visualize** — Draw the top matches and save them to `output/matches.jpg`.
 
 These matched points are the “anchor points” we’ll use in Phase 2 to calculate the homography and align the images.
+## Phase 2 — Homography Estimation & Image Alignment
+
+In Phase 2, we take the matched keypoints from Phase 1 and compute a **homography matrix** — a mathematical transformation that maps one image’s perspective onto the other.
+
+**Steps:**
+1. **Extract Matched Points** — Get the (x, y) coordinates of each matched keypoint in both images.
+2. **Estimate Homography (RANSAC)** — Use Random Sample Consensus to find the best-fit transformation while ignoring outliers.
+3. **Warp Image** — Apply the homography to warp one image into the other’s perspective.
+4. **Save Aligned Output** — Store the aligned image as `output/aligned.jpg` for Phase 3 blending.
+
+### 📊 Visual Flow
+```mermaid
+flowchart TD
+    A[Matched Keypoints from Phase 1] --> B[Extract Coordinates]
+    B --> C[Estimate Homography with RANSAC]
+    C --> D[Warp Image 1 to Image 2's Perspective]
+    D --> E[Aligned Images Ready for Blending]
 
 
 ## Tools
