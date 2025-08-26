@@ -4,14 +4,24 @@ This project stitches overlapping drone images into a seamless panorama using fe
 ## Project Pipelines
 
 ### 🛰 Panorama Stitching Pipeline
+
 ```mermaid
-flowchart TD
+flowchart LR
     A[Drone Images] --> B[Phase 1: Feature Detection & Matching (ORB)]
     B --> C[Phase 2: Homography Estimation (RANSAC)]
     C --> D[Phase 3: Image Warping & Blending]
     D --> E[Final Panorama]
 
-```
+    subgraph Acquisition
+        P[Identify Need] --> Q[Search & Compare Options]
+        Q --> R[Select Supplier / Dataset Source]
+        R --> S[Purchase / Download]
+        S --> T[Verify Files & Licensing]
+        T --> U[Integrate into Project Pipeline]
+    end
+
+    Acquisition --> A
+
 ## Phase 1 — ORB Feature Detection & Matching
 
 The goal of Phase 1 is to find visual “landmarks” that appear in both drone images so we can align them into a panorama.
