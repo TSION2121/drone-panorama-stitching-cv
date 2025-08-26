@@ -7,9 +7,9 @@ This project stitches overlapping drone images into a seamless panorama using fe
 
 ```mermaid
 flowchart LR
-    A[Drone Images] --> B[Phase 1: Feature Detection & Matching (ORB)]
-    B --> C[Phase 2: Homography Estimation (RANSAC)]
-    C --> D[Phase 3: Image Warping & Blending]
+    A[Drone Images] --> B["Phase 1: Feature Detection & Matching (ORB)"]
+    B --> C["Phase 2: Homography Estimation (RANSAC)"]
+    C --> D["Phase 3: Image Warping & Blending"]
     D --> E[Final Panorama]
 
     subgraph Acquisition
@@ -21,7 +21,8 @@ flowchart LR
     end
 
     Acquisition --> A
-```
+
+
 ## Phase 1 — ORB Feature Detection & Matching
 
 The goal of Phase 1 is to find visual “landmarks” that appear in both drone images so we can align them into a panorama.
