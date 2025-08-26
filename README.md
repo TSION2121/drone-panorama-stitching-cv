@@ -21,7 +21,7 @@ flowchart LR
     end
 
     Acquisition --> A
-
+```
 ## Phase 1 — ORB Feature Detection & Matching
 
 The goal of Phase 1 is to find visual “landmarks” that appear in both drone images so we can align them into a panorama.
