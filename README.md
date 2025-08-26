@@ -5,8 +5,6 @@ This project stitches overlapping drone images into a seamless panorama using fe
 
 ### 🛰 Panorama Stitching Pipeline
 
-### 🛰 Panorama Stitching Pipeline
-
 ```mermaid
 flowchart LR
     A[Drone Images] --> B["Phase 1: Feature Detection & Matching (ORB)"]
