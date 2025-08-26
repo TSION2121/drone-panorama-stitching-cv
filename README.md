@@ -41,7 +41,28 @@ flowchart TD
     C --> D[Warp Image 1 to Image 2's Perspective]
     D --> E[Aligned Images Ready for Blending]
 
+```
 
+## Phase 3 — Image Warping & Blending
+
+In Phase 3, we take the aligned images from Phase 2 and blend them into a seamless panorama.
+
+**Steps:**
+1. **Prepare Canvas** — Create an output canvas large enough to hold both warped and base images.
+2. **Blend Overlap Regions** — Use blending techniques to smooth transitions:
+    - **Feathering** — Gradually fade between images in the overlap.
+    - **Multi-band blending** — Blend at multiple frequency levels for smoother results.
+3. **Color & Exposure Matching** — Adjust brightness, contrast, and color balance to ensure consistency.
+4. **Save Final Panorama** — Export the stitched image as `output/panorama.jpg`.
+
+### 📊 Visual Flow
+```mermaid
+flowchart TD
+    A[Aligned Images from Phase 2] --> B[Prepare Canvas]
+    B --> C[Blend Overlap Regions]
+    C --> D[Color & Exposure Matching]
+    D --> E[Final Panorama Output]
+```
 ## Tools
 - Python 3.11
 - OpenCV
