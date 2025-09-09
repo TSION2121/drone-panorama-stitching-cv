@@ -11,3 +11,9 @@ __pycache__/
 ## Ignore generated output images
 #output/*.jpg
 #output/*.png
+
+
+*.pyc
+output/
+*.pkl
+.DS_Store

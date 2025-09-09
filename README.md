@@ -1,5 +1,18 @@
 # Drone Panorama Stitching (CV Final Project)
 
+**Author:** Tsion Bizuayehu  
+**Course:** MSc AI — Computer Vision Final Project  
+**Date:** September 2025
+
+## 📘 Abstract
+
+This project implements a modular pipeline for stitching overlapping drone images into seamless panoramas using computer vision techniques. The system detects and matches keypoints using ORB, estimates homography with RANSAC, and blends aligned images to produce a final panorama. The pipeline is designed for reproducibility, scalability, and clarity, with visual outputs at each phase and CLI support for flexible execution.
+
+## 🎯 Objectives
+- Detect and match features between drone images
+- Estimate geometric transformation for alignment
+- Blend images into a seamless panorama
+
 This project stitches overlapping drone images into a seamless panorama using feature matching, RANSAC, and warping techniques.
 ## Project Pipelines
 
